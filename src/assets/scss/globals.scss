@@ -35,8 +35,33 @@ ul, ol {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.onlyDesktop {
+  @include only-desktop;
+}
+
+.onlyMobile {
+  @include only-mobile;
+}
+
+.onlyTablet {
+  @include only-tablet;
+}
+
+.section {
+  margin-bottom: 100px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+  padding: 20px;
+
+  &._1440 {
+    max-width: 1400px;
   }
 }

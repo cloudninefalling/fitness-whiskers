@@ -1,0 +1,17 @@
+.HeaderLogo {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    width: max-content;
+    margin-left: 16px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    color: $Primary5;
+
+    & span {
+        color: $Bone4;
+    }
+}

@@ -1,0 +1,15 @@
+.IndexHero {
+    display: flex;
+    flex-direction: column;
+}
+
+.slogan {
+    color: $Primary5;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    
+    & span {
+        color: $Bone6;
+    }
+}
