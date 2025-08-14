@@ -1,0 +1,20 @@
+.NavBar {
+    //
+}
+
+.NavList {
+    display: flex;
+    gap: 12px;
+    height: fit-content;
+}
+
+.link {
+    border-bottom: 2px solid transparent;
+    padding: 8px 0;
+    display: inline-block;
+    font-weight: 500;
+
+    &._active {
+        border-color: $Primary5;
+    }
+}

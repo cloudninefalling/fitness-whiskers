@@ -1,36 +1,57 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "@/assets/scss/bundle.scss";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 
-import Header from "@/components/Header/Header";
+import '@/assets/scss/bundle.scss';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import Footer from '@/components/layout/Footer/Footer';
+import Header from '@/components/layout/Header/Header';
+
+const RalewayBold = localFont({
+    src: '../../public/fonts/raleway/Raleway-Bold.ttf',
+    weight: '700',
+    style: 'normal',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const RalewaySemibold = localFont({
+    src: '../../public/fonts/raleway/Raleway-Semibold.ttf',
+    weight: '600',
+    style: 'normal',
+});
+
+const RalewayMedium = localFont({
+    src: '../../public/fonts/raleway/Raleway-Medium.ttf',
+    weight: '500',
+    style: 'normal',
+});
+
+const Raleway = localFont({
+    src: '../../public/fonts/raleway/Raleway-Regular.ttf',
+    weight: '400',
+    style: 'normal',
 });
 
 export const metadata: Metadata = {
-  title: "Fitness Whiskers",
-  description: "Самое пушистое приложение для занятий фитнесом",
+    title: 'Fitness Whiskers',
+    description: 'Самое пушистое приложение для фитнеса',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="ru">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
+export default function RootLayout({ children }: Readonly<{children: React.ReactNode;}>) {
+    const fonts = [
+        Raleway.className,
+        RalewayBold.className,
+        RalewaySemibold.className,
+        RalewayMedium.className,
+    ].join(' ');
 
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="ru">
+            <body className={fonts}>
+                <Header />
+
+                {children}
+
+                <Footer />
+            </body>
+        </html>
+    );
 }
