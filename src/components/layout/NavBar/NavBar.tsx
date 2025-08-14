@@ -19,7 +19,7 @@ const LINKS = [
         href: '/dashboard',
     },
     {
-        label: `Тама<span style="color: ${COLORS.Secondary6}">go</span>чи`,
+        label: 'Тамаgoчи',
         href: '/tamagochi',
     },
     {

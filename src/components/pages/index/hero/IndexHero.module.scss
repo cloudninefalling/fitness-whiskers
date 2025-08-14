@@ -1,6 +1,7 @@
 .IndexHero {
     display: flex;
     flex-direction: column;
+    margin-top: min(20vh, 192px);
 }
 
 .slogan {
@@ -8,8 +9,15 @@
     font-size: 48px;
     font-weight: 700;
     text-align: center;
-    
+
     & span {
-        color: $Bone6;
+        color: $Bone5;
     }
+}
+
+.svg {
+    width: 42px;
+    height: 42px;
+    display: inline;
+    transform: translateY(6px) rotate(22deg) scaleX(-1);
 }

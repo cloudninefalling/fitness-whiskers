@@ -1,6 +1,8 @@
 import styles from './IndexHero.module.scss';
 
-const SLOGAN = 'Пушистая мотивация <br> <span>на каждый день.</span>';
+const IMAGE = `<img src="/svg/two-paws-bone.svg" class="${styles.svg}" />`;
+
+const SLOGAN = `Пушистая мотивация <br> ${IMAGE} <span>на каждый день.</span>`;
 
 export default function IndexHero() {
     return (
