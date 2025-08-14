@@ -30,16 +30,14 @@ export default function NavBar({ className }: IProps) {
     return (
         <nav className={(styles.NavBar, className)}>
             <ul className={styles.NavList}>
-                {LINKS.map(({ label, href }) => (
-                    <li key={label}>
-                        <Link
-                            href={href}
-                            className={linkClasses(href)}
-                        >
-                            {label}
-                        </Link>
-                    </li>
-                ))}
+                {LINKS.map(({ label, href }) => <li key={label}>
+                    <Link
+                        href={href}
+                        className={linkClasses(href)}
+                    >
+                        {label}
+                    </Link>
+                </li>)}
             </ul>
         </nav>
     );
