@@ -1,6 +1,6 @@
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 400px);
+    grid-template-columns: repeat(auto-fit, 392px);
     gap: 48px;
     align-items: start;
 
@@ -40,6 +40,14 @@
         &:hover {
             box-shadow: 14px 16px 0 0 rgb(255 255 255 / 10%);
             background-color: rgba($Base1, .4);
+
+            & :global(.ant-card-head-wrapper) {
+                transform: translateX(0);
+
+                &::after {
+                    margin-left: 0;
+                }
+            }
         }
     }
 
@@ -49,11 +57,26 @@
         font-weight: 700;
         font-size: 20px;
         text-align: center;
+        padding: 0;
+        overflow: hidden;
+
+        & :global(.ant-card-head-wrapper) {
+            transform: translateX(20px);
+            transition: transform .4s ease;
+
+            /* stylelint-disable-next-line no-descending-specificity */
+            &::after {
+                content: "➥";
+                margin-left: 10px;
+                transition: margin .4s ease;
+            }
+        }
 
         & :global(.ant-card-head-title) {
             white-space: wrap;
             text-overflow: unset;
-            padding: 8px 12px 12px;
+            max-width: calc(100% - 30px);
+            padding: 8px 24px 4px;
         }
     }
 }
