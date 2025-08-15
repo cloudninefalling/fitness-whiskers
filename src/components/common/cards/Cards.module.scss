@@ -1,6 +1,6 @@
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 420px);
+    grid-template-columns: repeat(auto-fit, 400px);
     gap: 48px;
     align-items: start;
 
@@ -26,12 +26,29 @@
     min-height: 100%;
     font-size: 16px;
     letter-spacing: .1px;
+    cursor: pointer;
+    transition: box-shadow .4s ease, background-color .4s ease;
+
+    &:not(._) {
+        box-shadow: 8px 10px 0 0 rgb(255 255 255 / 5%);
+
+        &:hover {
+            box-shadow: 14px 16px 0 0 rgb(255 255 255 / 10%);
+            background-color: rgba($Base1, .4);
+        }
+    }
 
     & :global(.ant-card-head) {
-        border-color: $Base2;
+        border-color: transparent;
         color: $Primary5;
         font-weight: 700;
         font-size: 20px;
         text-align: center;
+
+        & :global(.ant-card-head-title) {
+            white-space: wrap;
+            text-overflow: unset;
+            padding: 8px 12px 12px;
+        }
     }
 }
