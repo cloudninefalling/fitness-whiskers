@@ -1,10 +1,32 @@
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 64px;
     align-items: start;
 
     &._centered {
         justify-content: center;
+    }
+
+    @include respond-to(tablet) {
+        gap: 24px;
+    }
+
+    @include respond-to(mobile) {
+        gap: 16px;
+    }
+}
+
+.card {
+    background-color: rgba($Base1, .3);
+    color: $Bone5;
+    backdrop-filter: blur(4px);
+    font-weight: 600;
+
+    & :global(.ant-card-head) {
+        border-color: $Base2;
+        color: $Primary5;
+        font-weight: 700;
+        text-align: center;
     }
 }

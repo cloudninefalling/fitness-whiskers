@@ -6,6 +6,10 @@
     
     "rules": {
         "selector-class-pattern": null,
-        "scss/comment-no-empty": null
+        "scss/comment-no-empty": null,
+        "selector-pseudo-class-no-unknown": [
+            true,
+            { "ignorePseudoClasses": ["global", "export"] }
+        ]
     }
 }

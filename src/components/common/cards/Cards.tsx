@@ -6,13 +6,15 @@ import styles from '@/components/common/cards/Cards.module.scss';
 type IProps = {
     cards: ICard[];
     variant?: ICardVariant;
-    isCentered: boolean;
+    isCentered?: boolean;
+    className?: string;
 }
 
-export default function Cards({ cards, variant, isCentered }: IProps) {
+export default function Cards({ cards, variant = 'outlined', isCentered = false, className = '' }: IProps) {
     const cardsClasses = [
         styles.cards,
         isCentered? styles._centered : '',
+        className,
     ].join(' ');
 
     return (

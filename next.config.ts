@@ -7,13 +7,11 @@ const nextConfig: NextConfig = {
         @import "@/assets/scss/mixins.scss";`,
     },
 
-    experimental: {
-        turbo: {
-            rules: {
-                '*.svg': {
-                    loaders: ['@svgr/webpack'],
-                    as: '*.js',
-                },
+    turbopack: {
+        rules: {
+            '*.svg': {
+                loaders: ['@svgr/webpack'],
+                as: '*.js',
             },
         },
     },

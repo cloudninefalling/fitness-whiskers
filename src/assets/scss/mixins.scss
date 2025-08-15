@@ -8,6 +8,10 @@
             @content;
         }
     } @else if $media == tablet {
+        @media only screen and (width <= 1279px) {
+            @content;
+        }
+    } @else if $media == tablet-only {
         @media only screen and (width <= 1279px) and (width >= 768px) {
             @content;
         }
