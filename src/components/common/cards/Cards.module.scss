@@ -1,7 +1,7 @@
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
-    gap: 64px;
+    grid-template-columns: repeat(auto-fit, 420px);
+    gap: 48px;
     align-items: start;
 
     &._centered {
@@ -22,11 +22,16 @@
     color: $Bone5;
     backdrop-filter: blur(4px);
     font-weight: 600;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 16px;
+    letter-spacing: .1px;
 
     & :global(.ant-card-head) {
         border-color: $Base2;
         color: $Primary5;
         font-weight: 700;
+        font-size: 20px;
         text-align: center;
     }
 }
