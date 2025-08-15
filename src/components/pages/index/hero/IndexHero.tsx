@@ -4,7 +4,7 @@ import { ICard } from '@/assets/types/types';
 
 const IMAGE = `<img src="/svg/two-paws-bone.svg" class="${styles.svg}" />`;
 
-const SLOGAN = `Пушистая мотивация <br> ${IMAGE} <span>на каждый день.</span>`;
+const SLOGAN = `Пушистая мотивация <br> <span>на каждый день</span> ${IMAGE}`;
 
 const CARDS: ICard[] = [
     {
