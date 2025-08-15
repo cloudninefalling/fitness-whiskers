@@ -5,4 +5,5 @@ export type ICard = {
     variant?: ICardVariant,
     id: number,
     content: string,
+    href?: string,
 }
