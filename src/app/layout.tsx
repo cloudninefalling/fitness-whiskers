@@ -3,8 +3,8 @@ import localFont from 'next/font/local';
 
 import '@/assets/scss/bundle.scss';
 
-import Footer from '@/components/layout/Footer/Footer';
-import Header from '@/components/layout/Header/Header';
+import Footer from '@/components/common/Footer/Footer';
+import Header from '@/components/common/Header/Header';
 
 const Raleway = localFont({
     src: [

@@ -1,4 +1,4 @@
-import NavBar from '@/components/layout/NavBar/NavBar';
+import NavBar from '@/components/common/NavBar/NavBar';
 import styles from './Header.module.scss';
 import HeaderLogo from './HeaderLogo/HeaderLogo';
 

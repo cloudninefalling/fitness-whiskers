@@ -1,7 +1,7 @@
 .IndexHero {
     display: flex;
     flex-direction: column;
-    margin-top: min(20vh, 192px);
+    margin-top: 80px;
 
     & :global(.ant-card) {
         width: 300px;
