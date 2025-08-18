@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 
 import '@/assets/scss/bundle.scss';
 
-import Footer from '@/components/common/Footer/Footer';
+// import Footer from '@/components/common/Footer/Footer';
 import Header from '@/components/common/Header/Header';
 
 const Raleway = localFont({
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: Readonly<{children: React.React
 
                 {children}
 
-                <Footer />
+                {/* <Footer /> */}
             </body>
         </html>
     );
